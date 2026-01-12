@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PromptTemplates">
+    <option name="builtInPromptOverrides">
+      <list>
+        <BuiltInPromptOverride>
+          <option name="groupId" value="rules" />
+          <option name="promptId" value="project" />
+          <option name="text" value="Tech Stack &amp; Architecture:&#10;&#10;Pattern: Strict MVVM. Immutable state (val). Coroutines in viewModelScope.&#10;DI: Hilt (constructor injection).&#10;UI: 100% Jetpack Compose (Material 3 Expressive).&#10;Data: Repository pattern is the single source of truth.&#10;Gradle: Use libs.versions.toml. Never downgrade versions.&#10;&#10;Navigation 3 Standards:&#10;&#10;Framework: androidx.navigation3. Do NOT use legacy NavHost or string routes.&#10;Components: Use entryProvider, entry&lt;T&gt;, and NavDisplay.&#10;State: Manage backstack via NavigationState and Navigator.&#10;Pattern: Route objects must be type-safe classes/data classes.&#10;Reference: Since Navigation 3 APIs are new and evolving, base Navigation 3 code structure, patterns, and examples on the official Android nav3-recipes repository. If an exact pattern is not covered by the recipes, explain the closest matching recipe and ask before generating custom Navigation 3 code.&#10;&#10;Compose Implementation Standards:&#10;&#10;Screen Structure: Split into Stateful (receives hiltViewModel, collects state) and Stateless (pure data/lambdas).&#10;Previews: Mandatory @Preview for Stateless composables.&#10;Layout: MUST be adaptive. Support phones, tablets, and foldables using window size classes or equivalent adaptive layout techniques. Avoid hardcoded dimensions and assume multiple screen sizes and orientations.&#10;Motion: When a navigation or state change could benefit from a Shared Element Transition, explicitly identify and suggest it first. Do NOT implement Shared Element Transitions unless explicitly requested. Follow Material motion guidelines when making suggestions." />
+        </BuiltInPromptOverride>
+      </list>
+    </option>
+    <option name="prompts">
+      <list>
+        <PromptTemplate>
+          <option name="enabled" value="true" />
+          <option name="name" value="Unnamed" />
+          <option name="text" value="Hi Gemini. Resetting context for 'Flashcards'.&#10;&#10;To sync with the current app structure, please read all files located in the 'ui/navigation' package (including 'MainNavigation.kt' and any state/route files).&#10;&#10;Confirm once read and await my next command.&#10;" />
+        </PromptTemplate>
+      </list>
+    </option>
+  </component>
+</project>
