@@ -60,6 +60,7 @@ fun DeckDetailsScreen(
     )
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun DeckDetailsContent(
     deckId: String,
