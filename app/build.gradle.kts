@@ -1,24 +1,23 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import com.android.build.api.dsl.ApplicationExtension
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt.android)
     alias(libs.plugins.ksp)
     alias(libs.plugins.compose.compiler)
 }
 
-android {
+extensions.configure<ApplicationExtension> {
     namespace = "com.samidevstudio.flashcards"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "com.samidevstudio.flashcards"
         minSdk = 24
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
+        targetSdk = 37
+        versionCode = 3
+        versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -41,35 +40,32 @@ android {
     }
 }
 
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_17)
-    }
-}
-
 dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.ui)
-    implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    // Updated accessor name
+    implementation(libs.androidx.compose.icons.extended)
     
     // Navigation 3 & Serialization
-    implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
+    implementation(libs.androidx.adaptive.navigation3)
     implementation(libs.androidx.lifecycle.viewmodel.navigation3)
     implementation(libs.kotlinx.serialization.json)
     
+    // Room
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+    ksp(libs.androidx.room.compiler)
+    
     // Hilt
     implementation(libs.hilt.android)
-    ksp(libs.hilt.compiler)
-    ksp(libs.kotlin.metadata.jvm)
-
     implementation(libs.androidx.hilt.navigation.compose)
-    kspAndroidTest(libs.hilt.compiler)
-    kspAndroidTest(libs.kotlin.metadata.jvm)
+    ksp("com.google.dagger:hilt-android-compiler:${libs.versions.hilt.get()}")
+    kspAndroidTest("com.google.dagger:hilt-android-compiler:${libs.versions.hilt.get()}")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

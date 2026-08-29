@@ -13,3 +13,8 @@
 .externalNativeBuild
 .cxx
 local.properties
+app/flashcards_backup.json
+
+# Agent & Artifacts
+.agent/
+.artifacts/
