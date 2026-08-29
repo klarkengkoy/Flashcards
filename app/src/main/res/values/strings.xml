@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Flashcards – Custom Study Cards</string>
+    <string name="deck_list_title">My Decks</string>
+    <string name="deck_list_supporting_text">%1$d cards • %2$s</string>
+    <string name="select_deck_prompt">Select a deck to view cards</string>
+    <string name="back_button_desc">Back</string>
+    <string name="card_counter">%1$d / %2$d</string>
 </resources>
