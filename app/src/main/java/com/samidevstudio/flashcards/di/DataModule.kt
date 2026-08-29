@@ -14,12 +14,12 @@ abstract class DataModule {
     @Binds
     @Singleton
     abstract fun bindDeckRepository(
-        fakeDeckRepository: FakeDeckRepository
+        roomDeckRepository: RoomDeckRepository
     ): DeckRepository
 
     @Binds
     @Singleton
     abstract fun bindFlashcardRepository(
-        fakeFlashcardRepository: FakeFlashcardRepository
+        roomFlashcardRepository: RoomFlashcardRepository
     ): FlashcardRepository
 }
