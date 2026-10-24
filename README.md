@@ -5,10 +5,7 @@ I built this Android flashcard app to help me study kanji and Japanese vocabular
 ## Showcase
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/klarkengkoy/klarkengkoy/main/assets/screenshots/flashcards/showcase/screenshot_1_minimalist_flashcard_app.png" alt="Minimalist flashcard app showcase" width="23%" />
-  <img src="https://raw.githubusercontent.com/klarkengkoy/klarkengkoy/main/assets/screenshots/flashcards/showcase/screenshot_2_recall.png" alt="Flashcards recall showcase" width="23%" />
-  <img src="https://raw.githubusercontent.com/klarkengkoy/klarkengkoy/main/assets/screenshots/flashcards/showcase/screenshot_3_focus.png" alt="Flashcards focus showcase" width="23%" />
-  <img src="https://raw.githubusercontent.com/klarkengkoy/klarkengkoy/main/assets/screenshots/flashcards/showcase/screenshot_4_reveal.png" alt="Flashcards reveal showcase" width="23%" />
+  <a href="https://klarkengkoy.github.io/klarkengkoy/#flashcards-title"><img src="https://raw.githubusercontent.com/klarkengkoy/klarkengkoy/main/assets/portfolio-button.svg" alt="View Flashcards in my portfolio" width="240" height="56" /></a>
 </p>
 
 ## Core Features
@@ -24,23 +21,3 @@ I built this Android flashcard app to help me study kanji and Japanese vocabular
 - **Room**: Local storage for decks and cards.
 - **Hilt**: Dependency injection.
 - **Build**: Kotlin 2.4 and Android Gradle Plugin 9.3.
-
-## Screenshots
-
-### Portrait Mode
-<p align="center">
-  <img src="screenshots/deck_list_portrait.png" alt="Deck list in portrait" width="32%" />
-  <img src="screenshots/flashcard_front_portrait.png" alt="Flashcard front in portrait" width="32%" />
-  <img src="screenshots/flashcard_back_portrait.png" alt="Flashcard back in portrait" width="32%" />
-</p>
-
-### Landscape Mode
-<p align="center">
-  <img src="screenshots/landscape_empty_state.png" alt="Empty study view in landscape" width="60%" />
-</p>
-<p align="center">
-  <img src="screenshots/landscape_flashcard_front.png" alt="Flashcard front in landscape" width="60%" />
-</p>
-<p align="center">
-  <img src="screenshots/landscape_flashcard_back.png" alt="Flashcard back in landscape" width="60%" />
-</p>
